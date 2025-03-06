@@ -1,29 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 const people = [
   {
-    name: 'Emma Dorsey',
-    role: 'Senior Developer',
-    imageUrl:
-      'https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Praesentium iure error aliquam voluptas ut libero. Commodi placeat sit iure nulla officiis. Ut ex sit repellat tempora. Qui est accusamus exercitationem natus ut voluptas. Officiis velit eos ducimus.',
-    xUrl: '#',
-    linkedinUrl: '#',
+    name: "De'Andre Randolph",
+    role: 'Clubsites Creator',
+    imageUrl: '/randolph.jpg',
+    bio: 'Initially started as my CAS project, Club-Sites has grown into a full-fledged website creation platform for clubs and organizations at Riverwood!',
+    linkedinUrl: 'https://www.linkedin.com/in/deandre-randolph-a865192a0/',
   },
   // More people...
 ]
 
 export default function Team() {
   return (
-    <div className="bg-transparent py-12 md:py-24 lg:py-20">
+    <div className="bg-transparent py-12 md:py-24 lg:py-10">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-20 px-6 lg:px-8 xl:grid-cols-1">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-pretty text-4xl font-semibold tracking-tight text-primary-content sm:text-5xl">
             Club-Sites Creator
           </h2>
-          <p className="mt-6 text-lg/8 text-secondary-content">
-            We’re a dynamic group of individuals who are passionate about what
-            we do and dedicated to delivering the best results for our clients.
-          </p>
         </div>
         <ul
           role="list"
@@ -34,13 +28,13 @@ export default function Team() {
               <img
                 alt=""
                 src={person.imageUrl}
-                className="aspect-[3/2] w-full rounded-2xl object-cover"
+                className="aspect-[3/2] w-3/4 justify-self-center rounded-2xl object-cover"
               />
-              <h3 className="mt-6 text-lg/8 font-semibold text-gray-900">
+              <h3 className="mt-6 text-2xl/8 font-semibold text-white">
                 {person.name}
               </h3>
-              <p className="text-base/7 text-gray-600">{person.role}</p>
-              <p className="mt-4 text-base/7 text-gray-600">{person.bio}</p>
+              <p className="text-xl/7 text-indigo-600">{person.role}</p>
+              <p className="mt-4 text-base/7 text-slate-300">{person.bio}</p>
               <ul role="list" className="mt-6 flex gap-x-6">
                 <li>
                   <a

@@ -7,6 +7,9 @@ import {
   FingerPrintIcon,
   LockClosedIcon,
   ServerIcon,
+  LinkIcon,
+  CheckCircleIcon,
+  QuestionMarkCircleIcon,
 } from '@heroicons/react/20/solid'
 import {
   BoltIcon,
@@ -17,71 +20,66 @@ import Link from 'next/link'
 
 const primaryFeatures = [
   {
-    name: 'Server monitoring',
+    name: 'Fill out the Form!',
     description:
-      'Non quo aperiam repellendus quas est est. Eos aut dolore aut ut sit nesciunt. Ex tempora quia. Sit nobis consequatur dolores incidunt.',
+      'After filling out the form, Club-Sites will begin working on your website shortly aftewards and will contact you with any questions or concerns.',
     href: '#',
-    icon: BoltIcon,
+    icon: LinkIcon,
   },
   {
-    name: 'Collaborate',
+    name: 'Approve The prototype ',
     description:
-      'Vero eum voluptatem aliquid nostrum voluptatem. Vitae esse natus. Earum nihil deserunt eos quasi cupiditate. A inventore et molestiae natus.',
+      'After the website is created, you will be able to view the prototype and approve it or request changes.',
     href: '#',
-    icon: UsersIcon,
+    icon: QuestionMarkCircleIcon,
   },
   {
-    name: 'Task scheduling',
+    name: 'Website Deployment',
     description:
-      'Et quod quaerat dolorem quaerat architecto aliquam accusantium. Ex adipisci et doloremque autem quia quam. Quis eos molestiae at iure impedit.',
+      'After the Website is approved, it will be deployed to the internet at [clubname].riverwood.club!',
     href: '#',
-    icon: CalendarDaysIcon,
+    icon: CheckCircleIcon,
   },
 ]
 const secondaryFeatures = [
   {
-    name: 'Push to deploy.',
+    name: 'Landing page.',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-    icon: CloudArrowUpIcon,
+      'Be welcomed to a beautiful landing page that will be the first thing your visitors see.',
+    icon: CheckCircleIcon,
   },
   {
-    name: 'SSL certificates.',
+    name: 'What is your club?',
     description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
+      'Have a section that explains what your club is and what it does!',
+    icon: CheckCircleIcon,
   },
   {
-    name: 'Simple queues.',
+    name: 'Share some amazing moments',
     description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus.',
-    icon: ArrowPathIcon,
+      'Share your clubs best moments with the world with either a gallery section or a BENTO section!',
+    icon: CheckCircleIcon,
   },
   {
-    name: 'Advanced security.',
+    name: 'Leadership',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit aute id magna.',
-    icon: FingerPrintIcon,
+      'Show off your clubs leadership team with a beautiful and easy to understand leadership section!',
+    icon: CheckCircleIcon,
   },
   {
-    name: 'Powerful API.',
+    name: 'Show off your projects / events!',
     description:
-      'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: Cog6ToothIcon,
+      'List your clubs activities, projects, and events on the project section!',
+    icon: CheckCircleIcon,
   },
   {
-    name: 'Database backups.',
+    name: 'Supervisor Information',
     description:
-      'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. ',
-    icon: ServerIcon,
+      'Finally, have a section for your clubs supervisor, making reaching out a breeze!',
+    icon: CheckCircleIcon,
   },
 ]
-const stats = [
-  { id: 1, name: 'Developers on the platform', value: '8,000+' },
-  { id: 2, name: 'Daily requests', value: '900m+' },
-  { id: 3, name: 'Uptime guarantee', value: '99.9%' },
-  { id: 4, name: 'Projects deployed', value: '12m' },
-]
+
 const footerNavigation = {
   solutions: [
     { name: 'Hosting', href: '#' },
@@ -219,55 +217,58 @@ export default function Example() {
               className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-info to-success opacity-20"
             />
           </div>
-          <div className="mx-auto max-w-7xl px-6 pb-24 pt-10 sm:pb-32 lg:flex lg:px-8 lg:py-16">
+          <div className="mx-auto max-w-7xl px-6 pb-24 pt-0 sm:pb-32 lg:flex lg:px-8 lg:py-12">
             <div className="mx-auto max-w-2xl shrink-0 lg:mx-0 lg:pt-8">
-              <img
-                alt="Your Company"
-                src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
-                className="h-11"
-              />
-              <div className="mt-24 sm:mt-32 lg:mt-16">
-                <a href="#" className="inline-flex space-x-6">
-                  <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-sm/6 font-semibold text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
+              <div className="mt-10 sm:mt-24 lg:mt-12">
+                <Link href="/Clubs#OLAS" className="inline-flex space-x-6">
+                  <span className="rounded-full bg-indigo-500/10 px-3 py-1 text-md/6 font-semibold text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
                     What&apos;s new
                   </span>
-                  <span className="inline-flex items-center space-x-2 text-sm/6 font-medium text-gray-300">
-                    <span>Just shipped v1.0</span>
+                  <span className="inline-flex items-center space-x-2 text-md/6 font-medium text-gray-300">
+                    <span>
+                      Just Deployed <span className="text-orange-400">O</span>
+                      <span className="text-red-500">L</span>
+                      <span className="text-yellow-200">A</span>
+                      <span className="text-green-300">S</span> Website!
+                    </span>
                     <ChevronRightIcon
                       aria-hidden="true"
                       className="size-5 text-gray-500"
                     />
                   </span>
-                </a>
+                </Link>
               </div>
-              <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-base-content sm:text-7xl">
+              <h1 className="mt-10 text-pretty text-5xl font-semibold tracking-tight text-primary-content sm:text-7xl">
                 Explore Riverwoods Club Life!
               </h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-accent sm:text-xl/8">
+              <p className="mt-8 text-pretty text-lg font-medium text-secondary-content sm:text-xl/8">
                 Browse Riverwood&apos;s collection of clubs and find the perfect
                 one for you. Join a community of like-minded individuals and
                 participate in exciting events and activities.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link
-                  href="#"
+                  href="/Clubs"
                   className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
                 >
                   Browse Clubs
                 </Link>
-                <Link href="#" className="text-sm/6 font-semibold text-white">
+                <Link
+                  href="/About"
+                  className="text-sm/6 font-semibold text-white"
+                >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
-            <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
-              <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
+            <div className="mx-auto mt-16 max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-24">
+              <div className="max-w-3xl flex-none justify-items-center sm:max-w-5xl lg:max-w-none">
                 <img
                   alt="App screenshot"
-                  src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
-                  width={2432}
-                  height={1442}
-                  className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
+                  src="/Clubsites_logo.png"
+                  width={500}
+                  height={500}
+                  className="w-full lg:w-[34rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
                 />
               </div>
             </div>
@@ -277,61 +278,42 @@ export default function Example() {
         {/* Logo cloud */}
         <div className="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
           <h2 className="text-center text-lg/8 font-semibold text-white">
-            The world’s most innovative companies use our app
+            Riverwoods Most Popular Clubs have Club-Sites!
           </h2>
-          <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+          <div className="mx-auto mt-10 flex-row flex max-w-lg items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none ">
             <img
-              alt="Transistor"
-              src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-white.svg"
+              alt="OLAS"
+              src="/OLASLOGO.png"
               width={158}
               height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+              className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
             />
             <img
-              alt="Reform"
-              src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-white.svg"
+              alt="SADD"
+              src="/SADD.avif"
               width={158}
               height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            />
-            <img
-              alt="Tuple"
-              src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-white.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-            />
-            <img
-              alt="SavvyCal"
-              src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-white.svg"
-              width={158}
-              height={48}
-              className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-            />
-            <img
-              alt="Statamic"
-              src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-white.svg"
-              width={158}
-              height={48}
-              className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+              className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
             />
           </div>
         </div>
 
         {/* Feature section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
+        <div className="mx-auto mt-12 max-w-7xl px-6 sm:mt-24 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base/7 font-semibold text-indigo-400">
-              Deploy faster
+              Request a Club-Site!
             </h2>
-            <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
-              Everything you need to deploy your app
+            <p className="mt-2 text-pretty text-4xl mb-10 font-semibold tracking-tight text-white sm:text-5xl lg:text-balance">
+              Everything you need to get started making your clubs Club-Site is
+              in this link below!
             </p>
-            <p className="mt-6 text-lg/8 text-gray-300">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
-            </p>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd6ELjBrkkTtD-KxWM9r0zitjyTeTUktdZ0gdxuFrplvAMMUw/viewform?usp=header"
+              className="btn btn-ghost hover:scale-x-150 hover:scale-y-110 bg-indigo-600"
+            >
+              Click this button to fill out the form!
+            </Link>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
@@ -348,14 +330,6 @@ export default function Example() {
                   </dt>
                   <dd className="mt-1 flex flex-auto flex-col text-base/7 text-gray-300">
                     <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm/6 font-semibold text-indigo-400"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
                   </dd>
                 </div>
               ))}
@@ -364,34 +338,17 @@ export default function Example() {
         </div>
 
         {/* Feature section */}
-        <div className="mt-32 sm:mt-56">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl sm:text-center">
-              <h2 className="text-base/7 font-semibold text-indigo-400">
-                Everything you need
-              </h2>
-              <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-balance sm:text-5xl">
-                No server? No problem.
-              </p>
-              <p className="mt-6 text-lg/8 text-gray-300">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Maiores impedit perferendis suscipit eaque, iste dolor
-                cupiditate blanditiis.
-              </p>
-            </div>
-          </div>
+        <div className="mt-32 sm:mt-14">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8"></div>
           <div className="relative overflow-hidden pt-16">
-            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl bg-slate-600 p-6 lg:p-8">
               <img
                 alt="App screenshot"
-                src="https://tailwindui.com/plus/img/component-images/dark-project-app-screenshot.png"
+                src="/OLASSS.png"
                 width={2432}
                 height={1442}
-                className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-white/10"
+                className="rounded-xl shadow-2xl ring-1 ring-white/10"
               />
-              <div aria-hidden="true" className="relative">
-                <div className="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-gray-900 pt-[7%]" />
-              </div>
             </div>
           </div>
           <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md:mt-24 lg:px-8">
@@ -411,120 +368,13 @@ export default function Example() {
             </dl>
           </div>
         </div>
-
-        {/* Stats */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-56 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl">
-            <h2 className="text-base/8 font-semibold text-indigo-400">
-              Our track record
-            </h2>
-            <p className="mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Trusted by thousands of creators&nbsp;worldwide
-            </p>
-            <p className="mt-6 text-lg/8 text-gray-300">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
-              impedit perferendis suscipit eaque, iste dolor cupiditate
-              blanditiis.
-            </p>
-          </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
-            {stats.map((stat) => (
-              <div
-                key={stat.id}
-                className="flex flex-col gap-y-3 border-l border-white/10 pl-6"
-              >
-                <dt className="text-sm/6">{stat.name}</dt>
-                <dd className="order-first text-3xl font-semibold tracking-tight">
-                  {stat.value}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
-        {/* CTA section */}
-        <div className="relative isolate mt-32 px-6 py-32 sm:mt-56 sm:py-40 lg:px-8">
-          <svg
-            aria-hidden="true"
-            className="absolute inset-0 -z-10 size-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-          >
-            <defs>
-              <pattern
-                x="50%"
-                y={0}
-                id="1d4240dd-898f-445f-932d-e2872fd12de3"
-                width={200}
-                height={200}
-                patternUnits="userSpaceOnUse"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y={0} className="overflow-visible fill-gray-800/20">
-              <path
-                d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                strokeWidth={0}
-              />
-            </svg>
-            <rect
-              fill="url(#1d4240dd-898f-445f-932d-e2872fd12de3)"
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-            />
-          </svg>
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-0 top-10 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
-          >
-            <div
-              style={{
-                clipPath:
-                  'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)',
-              }}
-              className="aspect-[1108/632] w-[69.25rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
-            />
-          </div>
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              Boost your productivity. Start using our app today.
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg/8 text-gray-300">
-              Incididunt sint fugiat pariatur cupidatat consectetur sit cillum
-              anim id veniam aliqua proident excepteur commodo do ea.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-              >
-                Get started
-              </a>
-              <a href="#" className="text-sm/6 font-semibold text-white">
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </main>
 
       {/* Footer */}
-      <footer className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="border-t border-white/10 py-12 md:flex md:items-center md:justify-between">
-          <div className="flex justify-center gap-x-6 md:order-2">
-            {footerNavigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-400 hover:text-gray-300"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
-              </a>
-            ))}
-          </div>
+      <footer className="mx-auto max-w-7xl px-6 lg:px-8 mt-10">
+        <div className="border-t border-white/10 py-4 md:flex md:items-center md:justify-between">
           <p className="mt-8 text-center text-sm/6 text-gray-400 md:order-1 md:mt-0">
-            &copy; 2024 Your Company, Inc. All rights reserved.
+            &copy; Club-Sites, Riverwood International Charter School.
           </p>
         </div>
       </footer>

@@ -201,9 +201,9 @@ export default function Example() {
             />
           </div>
           <div className="overflow-hidden">
-            <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
+            <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-12">
               <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-                <div className="relative w-full lg:max-w-xl bg-info/20 shadow-xl p-5 rounded-xl lg:shrink-0 xl:max-w-2xl">
+                <div className="relative w-full lg:max-w-xl bg-base-300/70 shadow-xl p-5 rounded-xl lg:shrink-0 xl:max-w-2xl">
                   <h1 className="text-pretty text-5xl font-semibold tracking-tight text-primary-content sm:text-7xl">
                     We&apos;re creating the hub for Riverwood clubs.
                   </h1>
@@ -281,185 +281,54 @@ export default function Example() {
                   of featured clubs, we will soon cover all riverwood clubs and
                   organizations.
                 </p>
-                <p className="mt-10 max-w-xl text-base/7 text-gray-700">
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                  risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                  Id dolor praesent donec est. Odio penatibus risus viverra
-                  tellus varius sit neque erat velit. Faucibus commodo massa
-                  rhoncus, volutpat. Dignissim sed eget risus enim. Mattis
-                  mauris semper sed amet vitae sed turpis id.
-                </p>
-              </div>
-              <div className="lg:flex lg:flex-auto lg:justify-center">
-                <dl className="w-64 space-y-8 xl:w-80">
-                  {stats.map((stat) => (
-                    <div
-                      key={stat.label}
-                      className="flex flex-col-reverse gap-y-4"
-                    >
-                      <dt className="text-base/7 text-gray-600">
-                        {stat.label}
-                      </dt>
-                      <dd className="text-5xl font-semibold tracking-tight text-gray-900">
-                        {stat.value}
-                      </dd>
-                    </div>
-                  ))}
-                </dl>
               </div>
             </div>
           </div>
         </div>
 
         {/* Image section */}
-        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
+        <div className="mt-32 sm:mt-40 justify-items-center xl:mx-auto xl:max-w-7xl xl:px-8">
           <img
             alt=""
-            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80"
-            className="aspect-[5/2] w-full object-cover xl:rounded-3xl"
+            src="/Clubsites_logo.png"
+            className=" w-1/3 object-cover bg-slate-700 xl:rounded-3xl"
           />
         </div>
 
-        {/* Values section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
-              Our values
-            </h2>
-            <p className="mt-6 text-lg/8 text-gray-600">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-              magnam voluptatum cupiditate veritatis in accusamus quisquam.
-            </p>
-          </div>
-          <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base/7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            {values.map((value) => (
-              <div key={value.name}>
-                <dt className="font-semibold text-gray-900">{value.name}</dt>
-                <dd className="mt-1 text-gray-600">{value.description}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
         {/* Logo cloud */}
-        <div className="relative isolate -z-10 mt-32 sm:mt-48">
-          <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(75%_45%_at_50%_55%,blue,transparent)]">
-            <svg
-              aria-hidden="true"
-              className="h-[40rem] w-[80rem] flex-none stroke-primary-content"
-            >
-              <defs>
-                <pattern
-                  x="50%"
-                  y="50%"
-                  id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                  width={200}
-                  height={200}
-                  patternUnits="userSpaceOnUse"
-                  patternTransform="translate(-100 0)"
-                >
-                  <path d="M.5 200V.5H200" fill="none" />
-                </pattern>
-              </defs>
-              <svg
-                x="50%"
-                y="50%"
-                className="overflow-visible fill-secondary-content"
-              >
-                <path
-                  d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
-                  strokeWidth={0}
-                />
-              </svg>
-              <rect
-                fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
-                width="100%"
-                height="100%"
-                strokeWidth={0}
-              />
-            </svg>
-          </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="text-center text-xl/8 font-semibold text-primary">
-              Trusted by Riverwoods most popular clubs
-            </h2>
-            <div className="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
-              <img
-                alt="Transistor"
-                src="https://tailwindui.com/plus/img/logos/158x48/transistor-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Reform"
-                src="https://tailwindui.com/plus/img/logos/158x48/reform-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="Tuple"
-                src="https://tailwindui.com/plus/img/logos/158x48/tuple-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-              />
-              <img
-                alt="SavvyCal"
-                src="https://tailwindui.com/plus/img/logos/158x48/savvycal-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
-              />
-              <img
-                alt="Statamic"
-                src="https://tailwindui.com/plus/img/logos/158x48/statamic-logo-gray-900.svg"
-                width={158}
-                height={48}
-                className="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
-              />
-            </div>
+        <div className="mx-auto mt-8 max-w-7xl px-6 sm:mt-16 lg:px-8">
+          <h2 className="text-center text-lg/8 font-semibold text-white">
+            Riverwoods Most Popular Clubs have Club-Sites!
+          </h2>
+          <div className="mx-auto mt-10 flex-row flex max-w-lg items-center gap-x-8 gap-y-10 sm:max-w-xl sm:gap-x-10 lg:mx-0 lg:max-w-none ">
+            <img
+              alt="OLAS"
+              src="/OLASLOGO.png"
+              width={158}
+              height={48}
+              className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
+            />
+            <img
+              alt="SADD"
+              src="/SADD.avif"
+              width={158}
+              height={48}
+              className="col-span-2 max-h-24 w-full object-contain lg:col-span-1"
+            />
           </div>
         </div>
 
         {/* Team section */}
-        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-48 lg:px-8">
+        <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-12 lg:px-8">
           <Team />
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="mt-16 sm:mt-32">
-        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
-          <nav
-            aria-label="Footer"
-            className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
-          >
-            {footerNavigation.main.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-gray-900"
-              >
-                {item.name}
-              </a>
-            ))}
-          </nav>
-          <div className="mt-16 flex justify-center gap-x-10">
-            {footerNavigation.social.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-gray-600 hover:text-gray-800"
-              >
-                <span className="sr-only">{item.name}</span>
-                <item.icon aria-hidden="true" className="size-6" />
-              </a>
-            ))}
-          </div>
-          <p className="mt-10 text-center text-sm/6 text-gray-600">
-            &copy; 2024 Your Company, Inc. All rights reserved.
+      <footer className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="border-t border-white/10 py-4 md:flex md:items-center md:justify-between">
+          <p className="mt-8 text-center text-sm/6 text-gray-400 md:order-1 md:mt-0">
+            &copy; Club-Sites, Riverwood International Charter School.
           </p>
         </div>
       </footer>
