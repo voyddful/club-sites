@@ -17,7 +17,6 @@ const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'Clubs', href: '/Clubs', current: false },
   { name: 'About', href: '/About', current: false },
-  { name: 'Extra', href: '/Extra', current: false },
 ]
 
 function classNames(...classes) {
@@ -32,25 +31,18 @@ export default function Navbar() {
       navigation[0].current = true
       navigation[1].current = false
       navigation[2].current = false
-      navigation[3].current = false
       break
     case '/Clubs':
       navigation[0].current = false
       navigation[1].current = true
       navigation[2].current = false
-      navigation[3].current = false
+
       break
     case '/About':
       navigation[0].current = false
       navigation[1].current = false
       navigation[2].current = true
-      navigation[3].current = false
-      break
-    case '/Extra':
-      navigation[0].current = false
-      navigation[1].current = false
-      navigation[2].current = false
-      navigation[3].current = true
+
       break
   }
   return (
@@ -80,7 +72,7 @@ export default function Navbar() {
               >
                 <Image
                   alt="Clubsites Icon"
-                  src="/clubsites_icon.png"
+                  src="/Clubsites_icon.png"
                   width={32}
                   height={32}
                   className="h-12 md:h-8 w-auto"

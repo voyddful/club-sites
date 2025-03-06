@@ -6,6 +6,7 @@ const people = [
   {
     name: 'OLAS',
     imageUrl: '/OLASLOGO.png',
+    link: 'https://olas.riverwood.club',
     xUrl: '#',
     linkedinUrl: '#',
   },
@@ -30,7 +31,7 @@ export default function Example() {
         >
           {people.map((person) => (
             <Link
-              href="/"
+              href={person.link}
               key={person.name}
               id={person.name}
               className="rounded-2xl bg-base-300 hover:scale-105 ease-in-out btn-ghost transition px-8 py-10"
